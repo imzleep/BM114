@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main()
+{
+ int sayi, x, sonuc;
+ int kontrol = 0;
+ 
+ printf("Lutfen sayiyi girin.\n");
+ scanf("%d",&sayi);
+if (sayi<0)
+{
+ printf("Lutfen pozitif bir sayi deneyin.");
+}
+else
+    for(x=1; x<=sayi; x= x+2)
+    {
+       sonuc += x * x;
+    }
+    printf("Girdiğiniz sayiya kadar tek sayilarin karelerinin toplami : %d", sonuc);
+}
