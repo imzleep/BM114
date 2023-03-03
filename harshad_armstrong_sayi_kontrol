@@ -1,0 +1,45 @@
+#include <stdio.h>
+int main() {
+    int sayi, asilsayi, basamak, sonuc, secim = 0;
+    printf("Harshad sayi kontrolu icin 1, Armstrong kontrolu icin 2 girin. \n");
+    scanf("%d", &sayi);
+    
+    if (sayi == 1){
+    printf("Lutfen sayiyi girin. \n");
+    scanf("%d", &sayi);
+    asilsayi = sayi;
+    while (asilsayi != 0) {
+       
+        basamak = asilsayi % 10;
+        
+       sonuc += basamak;
+        
+       asilsayi /= 10;
+    }
+    if (sayi % sonuc == 0)
+        printf("%d sayisi Harshad sayisidir.", sayi);
+    else
+        printf("%d sayisi Harshad sayisi degildir.", sayi);
+    }
+    if (sayi == 2) {
+    printf("Lutfen sayiyi girin.\n");
+    scanf("%d", &sayi);
+    asilsayi = sayi;
+
+    while (asilsayi != 0) {
+       
+        basamak = asilsayi % 10;
+        
+       sonuc += basamak * basamak * basamak;
+        
+       asilsayi /= 10;
+    }
+
+    if (sonuc == sayi)
+        printf("%d sayisi Armstrong sayisidir.", sayi);
+    else
+        printf("%d sayisi Armstrong sayisi degildir.", sayi);
+    }
+
+    return 0;
+}
